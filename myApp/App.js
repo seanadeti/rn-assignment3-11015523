@@ -1,13 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, ScrollView, Dimensions } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, ScrollView, FlatList } from 'react-native';
 
 
 export default function App() {
+
   return (
-    
-    <SafeAreaView style={styles.container}>
-      <ScrollView>
+        
       <View style={styles.container}>
+        <ScrollView showsVerticalScrollIndicator={false}>
+        <SafeAreaView style={styles.container}>
+        
         <View style={styles.heading}>
           <Text style={styles.head}>Hello, Devs </Text>
           <Text>14 Task Today</Text>
@@ -58,14 +60,12 @@ export default function App() {
           <Image source={require('./images/images.jpeg')}
             style={styles.codePic}/>
         </View>
-        
         <View style={styles.clean}>
           <Text style={styles.codeText}>Clean</Text>
           <Text style={styles.codeInnerText}>{'\n\n'}10 Task</Text>
           <Image source={require('./images/clean.jpg.avif')}
           style={styles.cookPic}/>
-        </View>
-        
+        </View>   
         <View style={styles.laundry}>
           <Text style={styles.codeText}>Laundry</Text>
           <Text style={styles.codeInnerText}>{'\n\n'}11 Task</Text>
@@ -79,10 +79,41 @@ export default function App() {
           style={styles.cookPic}/>
         </View>
         </ScrollView>
+        
         <StatusBar style="auto" />
+        
+        </SafeAreaView>
+        
+        <View style={styles.task}>
+        <Text style={styles.taskText}> Ongoing Task</Text> 
+        <FlatList 
+        style={styles.list}
+        contentContainerStyle={styles.contentContainer}
+          data={[
+            { key : "1", text : "Mobile Web Development" }, 
+            { key : "2", text : "Web Development" },
+	          { key : "3", text : "Push Ups" }, 
+            { key : "4", text : "Design New Logo" },
+            { key : "5", text : "Team Meeting" }, 
+            { key : "6", text : "Client Presentation" },
+            { key : "7", text : "Database Backup" }, 
+            { key : "8", text : "SEO Optimization" },
+            { key : "9", text : "Social Media Management" }, 
+            { key : "10", text : "Market Research" },
+            { key : "11", text : "Code Review" },
+            { key : "12", text : "Update Portfolio" },
+            { key : "13", text : "User Testing" },
+            { key : "14", text : "Bug Fixing" },
+            { key : "15", text : "Product Testing" },
+          ]}
+          renderItem={ ({item}) => (<View style={styles.item}>
+            <Text style={styles.itemText}>{item.text}</Text>
+          </View>)}
+        />  
+        </View>
+        </ScrollView>
       </View>
-      </ScrollView>
-    </SafeAreaView>
+   
   );
 }
 
@@ -93,14 +124,16 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     padding: 10,
+    paddingTop:90,
   },
   head: {
     fontSize: 30,
     fontWeight: 'bold',
   },
   heading: {
-    paddingBottom: 700,
+    paddingBottom: 0,
     paddingRight: 210,
+    bottom: 0,
   },
   profilePic: {
     position: 'absolute',
@@ -118,7 +151,7 @@ const styles = StyleSheet.create({
     paddingLeft: 49
   },
   search: {
-    bottom: 670,
+    bottom: -25,
   },
   searchIcon: {
     position: 'absolute',
@@ -134,7 +167,7 @@ const styles = StyleSheet.create({
    fontWeight: 'bold',
    fontSize: 20,
    paddingRight: 270,
-   bottom: 630,
+   bottom: -60,
   },
   catPic: {
     right: 100,
@@ -252,13 +285,54 @@ const styles = StyleSheet.create({
     height: 200,
     marginLeft: 40
   },
+  scrollView: {  
+    bottom: -151,
+    //paddingBottom: 800,
+    paddingTop: 0,
+    marginBottom:0,
+    bottom: -80
+  },
+  taskText: {
+    fontWeight:'bold',
+    fontSize: 20,
+    bottom: 300,
+    right: -7,
+  },
   scrollContent: {
     flexDirection: 'row',
     alignItems: 'center',
   },
-  scrollView: {
-    //marginVertical: 20,
-    height: 220,  // Fixed height for the ScrollView
-    bottom: 630
+  ongoingTaskList: {
+    bottom: 600,
+  },
+  task: {
+    flex: 1,
+    paddingTop: 30,
+    padding: 0,
+    bottom: 20,
+    top:400
+  },
+  list: {
+    flexGrow: 0,
+    bottom: 280,
+    marginBottom: 160
+  },
+  item: {
+    backgroundColor: 'white',
+    padding: 15,
+    marginVertical: 8,
+    marginHorizontal: 16,
+    borderRadius: 20,
+    height: 160,
+    width: 380,
+    borderWidth: 0.3,
+    borderColor: '#fbf9f7',
+
+  },
+  itemText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    fontWeight:'500',
+    paddingTop: 50
   },
 });
