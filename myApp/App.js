@@ -1,5 +1,5 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TextInput, SafeAreaView, ScrollView, Dimensions } from 'react-native';
 
 
 export default function App() {
@@ -25,12 +25,20 @@ export default function App() {
           <Image source={require('./images/Filter.png')} style={styles.filterIcon}/>
         </View>
         <Text style={styles.cat}>Categories</Text>
-        <View style={styles.container}>
-          <Image 
-          source={require('./images/Categories card-2.png')} 
-          style={styles.catPic}/>
-          <Image source={require('./images/Categories card.png')}
-          style={styles.study}/>
+        <ScrollView horizontal={true} showsHorizontalScrollIndicator={false}
+        style={styles.scrollView}
+        contentContainerStyle={styles.scrollContent}>
+        <View style={styles.exercise}>
+          <Text style={styles.codeText}>Exercise</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}12 Task</Text>
+          <Image source={require('./images/woman.png')}
+            style={styles.codePic}/>
+        </View>
+        <View style={styles.study}>
+          <Text style={styles.codeText}>Study</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}12 Task</Text>
+          <Image source={require('./images/study.png')}
+            style={styles.codePic}/>
         </View>
         <View style={styles.code}>
           <Text style={styles.codeText}>Code</Text>
@@ -38,6 +46,39 @@ export default function App() {
           <Image source={require('./images/images-2.png')}
             style={styles.codePic}/>
         </View>
+        <View style={styles.cook}>
+          <Text style={styles.codeText}>Cook</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}13 Task</Text>
+          <Image source={require('./images/images-3.png')}
+          style={styles.cookPic}/>
+        </View>
+        <View style={styles.workout}>
+          <Text style={styles.codeText}>Workout</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}12 Task</Text>
+          <Image source={require('./images/images.jpeg')}
+            style={styles.codePic}/>
+        </View>
+        
+        <View style={styles.clean}>
+          <Text style={styles.codeText}>Clean</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}10 Task</Text>
+          <Image source={require('./images/clean.jpg.avif')}
+          style={styles.cookPic}/>
+        </View>
+        
+        <View style={styles.laundry}>
+          <Text style={styles.codeText}>Laundry</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}11 Task</Text>
+          <Image source={require('./images/laundry.jpg.avif')}
+            style={styles.codePic}/>
+        </View>
+        <View style={styles.work}>
+          <Text style={styles.codeText}>Work</Text>
+          <Text style={styles.codeInnerText}>{'\n\n'}30 Task</Text>
+          <Image source={require('./images/images-5.png')}
+          style={styles.cookPic}/>
+        </View>
+        </ScrollView>
         <StatusBar style="auto" />
       </View>
       </ScrollView>
@@ -100,16 +141,16 @@ const styles = StyleSheet.create({
     bottom: 630,
   },
   study: {
-    bottom: 822,
-    left: 120
+    bottom: 0,
+    left: 100
   },
   code: {
-    flexDirection: 'row',
+    flexDirection: 'column',
     borderRadius:20,
     backgroundColor: 'white',
-    bottom:815,
-    padding: 90,
-    right: 100,
+    bottom: 0,
+    padding: 0,
+    right: -640,
     width: 187,
     height: 200,
   },
@@ -132,5 +173,92 @@ const styles = StyleSheet.create({
     fontWeight: 'condensedBold',
     paddingLeft: 20,
     padding: 14,
+  },
+  cook: {
+    flexDirection: 'row',
+    borderRadius:20,
+    backgroundColor: 'white',
+    bottom: 0,
+    padding: 0,
+    left: 243,
+    width: 180,
+    height: 200,
+  },
+  cookPic: {
+    height: 100,
+    width: 100,
+    position: 'absolute',
+    bottom: 15,
+    right: 39,
+  },
+  workout: {
+    flexDirection: 'column',
+    borderRadius:20,
+    backgroundColor: 'white',
+    bottom: 0,
+    padding: 0,
+    right: 150,
+    width: 187,
+    height: 200,  
+  },
+  clean: {
+    flexDirection: 'column',
+    borderRadius:20,
+    backgroundColor: 'white',
+    bottom:0,
+    padding: 0,
+    left: -540,
+    width: 180,
+    height: 200,
+  }, 
+  laundry: {
+    flexDirection: 'column',
+    borderRadius:20,
+    backgroundColor: 'white',
+    bottom: 0,
+    padding: 0,
+    right: 930,
+    width: 187,
+    height: 200, 
+  },
+  work: {
+    flexDirection: 'column',
+    borderRadius: 20,
+    backgroundColor: 'white',
+    bottom:0,
+    left: 148,
+    width: 187,
+    height: 200,
+    marginRight: 153,
+  },
+  exercise: {
+    flexDirection: 'column',
+    borderRadius: 20,
+    backgroundColor: 'white',
+    bottom: 0,
+    padding: 0,
+    right: -1268,
+    width: 187,
+    height: 200,
+  },
+  study:{
+    flexDirection: 'column',
+    borderRadius: 20,
+    backgroundColor: 'white',
+    bottom: 0,
+    padding: 0,
+    right: 220,
+    width: 187,
+    height: 200,
+    marginLeft: 40
+  },
+  scrollContent: {
+    flexDirection: 'row',
+    alignItems: 'center',
+  },
+  scrollView: {
+    //marginVertical: 20,
+    height: 220,  // Fixed height for the ScrollView
+    bottom: 630
   },
 });
