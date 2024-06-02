@@ -3,13 +3,12 @@
 ## 11015523
 
 ## Screenshots
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.56.44.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.56.50.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.56.54.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.56.56.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.57.00.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.57.13.png>)
-![alt text](<Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14.57.23.png>)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 56 44](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/d9db9950-6468-46d8-8353-06d0ded46c0a)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 56 50](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/740a6097-e8e5-469a-abac-eda1c9674fcb)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 56 54](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/e95251dd-0cf4-4240-90e6-1d385d7f18b6)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 56 56](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/de4f987f-3539-47da-977a-84324fd3795c)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 57 13](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/32d832a3-01c7-44fe-80d1-c0cf98ee03c2)
+![Simulator Screenshot - iPhone 14 Pro Max - 2024-06-02 at 14 57 23](https://github.com/seanadeti/rn-assignment3-11015523/assets/143741295/4b7a4580-fa69-4e92-a69c-7f44b5d49237)
 
 
 ## Components Overview
